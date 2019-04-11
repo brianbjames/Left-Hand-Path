@@ -107,7 +107,7 @@
 	      </div>
 	      <div class="col-sm-6 col-md-4">
 	        <div class="thumbnail">
-	          <img data-src="holder.js/100%x200" alt="Stygian Morass" style="height: 100%; width: 100%; display: block;" src="StygianMorassCover.jpg" data-holder-rendered="true">
+	          <a href="http://lefthandpathwax.net/claws/"><img data-src="holder.js/100%x200" alt="Stygian Morass" style="height: 100%; width: 100%; display: block;" src="StygianMorassCover.jpg" data-holder-rendered="true"></a>
 	          <div class="caption">
 	            <h3>C.L.A.W.S.<br><strong><i>Stygian Morass</i></strong></h3>
 	            <!--<p>Album blurb goes here. At vero eos et accusamus et iusto odio dignissimos.</p>-->  
@@ -169,7 +169,33 @@
 
         
 
-      </div> <!-- /container -->
+      </div> <!-- /container -->  
+<!--
+Preload artists images
+-->  
+	<div class="hidden">
+		<script type="text/javascript">
+			<!--//--><![CDATA[//><!--  
+			console.log('before');
+			setTimeout(function(){
+			    console.log('after');
+			},3000);
+				var images = new Array()
+				function preload() {
+					for (i = 0; i < preload.arguments.length; i++) {
+						images[i] = new Image()
+						images[i].src = preload.arguments[i]
+					}
+				}
+				preload(
+					"http://www.lefthandpathwax.net/cube.jpg",
+					"http://www.lefthandpathwax.net/claws.jpg",
+					"http://www.lefthandpathwax.net/russell_e_l_butler.jpg",
+					"http://www.lefthandpathwax.net/michael_claus.jpg"
+				)
+			//--><!]]>
+		</script>
+	</div>
 
     </main>
 
